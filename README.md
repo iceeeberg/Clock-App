@@ -2,7 +2,7 @@
 
 A digital clock created with HTML, CSS, and JavaScript.
 
-Link is located here
+### Link is located [here](https://iceeeberg.github.io/Clock-App/)
 
 ## Summary 
 
@@ -10,4 +10,4 @@ This app was the first one I created on my own. It introduced to me many element
 
 ## Author
 
-Dante Leeseberg - Full Stack Software Devoloper 
+Dante Leeseberg - Full Stack Software Devoloper [LinkedIn](linkedin.com/in/dante-leeseberg-bba05883)
