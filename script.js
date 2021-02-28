@@ -1,53 +1,75 @@
-const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August","September",
-"October", "November", "December"];
+function displayClock() {
+  const time = new Date();
+  let hours = time.getHours();
+  const minutes = addLeadingZero(time.getMinutes());
+  const seconds = addLeadingZero(time.getSeconds());
+  const isAm = hours < 12 || hours === 0;
 
-const M = new Date();
+  const displayAmPm = isAm ? 'AM' : 'PM';
+  hours = hours >= 13 ? hours - 12 : hours;
+  hours = hours === 0 ? hours + 12 : hours;
 
-var today = new Date(); 
-var dd = String(today.getDate()).slice(-2);
-var yyyy = today.getFullYear();
-var ordinal;
-  if (dd > 3 && dd < 21) 
-  ordinal = dd +'th';
-  switch (dd % 10) {
-    case 1: ordinal = dd + "st";
-    case 2: ordinal = dd + "nd";
-    case 3: ordinal = dd + "rd";
-    default: ordinal = dd + "th";
-};
-
-
-const currentDate = document.getElementById('date');
-currentDate.textContent = (dayNames[M.getDay()] + ',' + ' ' + monthNames[M.getMonth()]) + ' ' + ordinal + ' ' + 
-yyyy; 
-
-var space = ' '
-document.write(space)
-
-function increment() {
-var time = new Date();
-var hour = time.getHours()
-var min = ('0' + time.getMinutes()).slice(-2);
-var sec = ('0' + time.getSeconds()).slice(-2);
-var amPM;
-
-if (hour > 12) {
-  amPM = 'PM';
-  hour = hour - 12 
-} else {
-    amPM = 'AM';
+  const currentTime = document.getElementById('time');
+  currentTime.textContent = `${hours}:${minutes}:${seconds} ${displayAmPm}`;
 }
-var leadingZero;
 
-if (hour < 10) {
-  leadingZero = '0' 
- } else {
-    delete leadingZero
+function addLeadingZero(number) {
+  return number < 10 ? '0' + number : number;
+}
+
+const dayNames = [
+  "Sunday", 
+  "Monday", 
+  "Tuesday", 
+  "Wednesday", 
+  "Thursday", 
+  "Friday", 
+  "Saturday"
+];
+
+const monthNames = [
+  "January", 
+  "February", 
+  "March", 
+  "April", 
+  "May", 
+  "June", 
+  "July", 
+  "August",
+  "September",
+  "October", 
+  "November", 
+  "December"
+];
+
+
+function displayDate() {
+  const today = new Date(); 
+  const date = today.getDate();
+  const year = today.getFullYear();
+ 
+  const currentDate = document.getElementById('date');
+  
+  currentDate.textContent = `${dayNames[today.getDay()]}, ${monthNames[today.getMonth()]} ${convertToOrdinal(date)} ${year}`;
+}
+
+function convertToOrdinal(number) {
+  if (number < 10 || number > 20) {
+    switch(number % 10) {
+      case 1: 
+        return number + 'st';
+      case 2: 
+        return number + 'nd';
+      case 3: 
+        return number + 'rd';
+    }
+   
+    return number + 'th';
   }
-
-const currentTime = document.getElementById('time');
-currentTime.textContent = leadingZero + hour + ':' + min + ':' + sec + ' ' + amPM
 }
-setInterval(increment, 1000);
+
+displayDate();
+displayClock();
+setInterval(displayClock, 1000);
+
 

@@ -5,3 +5,11 @@ body{
   text-align: center;
 }
 
+#time{
+  margin-top: 2em;
+}
+
+#date{
+  font-size: 60px;
+  margin-top: 0.5em;
+}
