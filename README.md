@@ -8,7 +8,7 @@ A digital clock created with HTML, CSS, and JavaScript.
 
 ## Summary 
 
-This app was the first one I created on my own. It introduced to me many elements of JavaScript, such as how to display local time. The use of date.toLocaleTimeString() was not used to further challenge my abilities.  Getting used to using the Google Chrome Developer Tools was also a great benefit. A first step in the right direction towards my goal of being a software developer.
+This app was the first one I created on my own. It introduced to me many elements of JavaScript, such as how to display local time. The use of date.toLocaleTimeString() was not used to further challenge my abilities.  Getting used to using the Google Chrome Developer Tools was also a great benefit. A first step in the right direction towards my goal of becoming a software developer.
 
 ## Author
 
