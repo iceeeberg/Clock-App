@@ -53,19 +53,18 @@ function displayDate() {
   currentDate.textContent = `${dayNames[today.getDay()]}, ${monthNames[today.getMonth()]} ${convertToOrdinal(date)} ${year}`;
 }
 
-function convertToOrdinal(number) {
-  if (number < 10 || number > 20) {
-    switch(number % 10) {
+function convertToOrdinal(date) {
+  if (date < 10 || date > 20) {
+    switch(date % 10) {
       case 1: 
-        return number + 'st';
+        return date + 'st';
       case 2: 
-        return number + 'nd';
+        return date + 'nd';
       case 3: 
-        return number + 'rd';
-    }
-   
-    return number + 'th';
-  }
+        return date + 'rd';
+      }
+  } 
+    return date + 'th';
 }
 
 displayDate();
