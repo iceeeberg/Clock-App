@@ -4,7 +4,7 @@ A digital clock created with HTML, CSS, and JavaScript.
 
 ### Link is located [here](https://iceeeberg.github.io/Clock-App/)
 
-!(Digital_Clock.png)
+![clock-app](Digital_Clock.png)
 
 ## Summary 
 
