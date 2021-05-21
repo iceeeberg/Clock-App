@@ -12,4 +12,4 @@ This app was the first one I created on my own. It introduced to me many element
 
 ## Author
 
-Dante Leeseberg - Full Stack Software Devoloper [LinkedIn](linkedin.com/in/dante-leeseberg-bba05883)
+Dante Leeseberg - Full Stack Software Devoloper [LinkedIn](linkedin.com/in/dante-leeseberg-bba05883) | [Website](https://www.danteleeseberg.com/)
